@@ -1,7 +1,9 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
+	"os"
 	"strconv"
 )
 
@@ -41,5 +43,8 @@ func encode(s string) string {
 
 func main() {
 
-	encode("nkoffTiTinkoff")
+	reader := bufio.NewReader(os.Stdin)
+	s, _ := reader.ReadString('\n')
+
+	encode(s)
 }
